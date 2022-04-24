@@ -30,16 +30,16 @@ exports.createClinic = (req, res) => {
 };
 
 //create a clinic => /api/clinic/id
-exports.updateclinic = (req, res) => {
+exports.updateClinic = (req, res) => {
     let clinicId = req.params.id;
     console.log(clinicId);
     let clinic = clinicData.find(item => item.id === clinicId)
     console.log(clinic);
     if (!clinic) {
-        res
+        return res
             .status(404)
             .json({ message: "Clinic Not found" });
-        return;
+
     }
     let updatedclinic = {
         ...clinic,
@@ -48,7 +48,7 @@ exports.updateclinic = (req, res) => {
 
     clinicData = clinicData.map((el) => el.id === clinicId ? updatedclinic : el);
 
-    res.status(200).json({
+    return res.status(200).json({
         message: "Scucessfully updated the clinic",
         result: updatedclinic
     });
@@ -59,12 +59,12 @@ exports.deleteClinic = (req, res) => {
     let clinicId = req.params.id;
     let clinic = clinicData.find(item => item.id === clinicId);
     if (!clinic) {
-        res
+        return res
             .status(404)
             .json({ message: "clinic not found" });
     }
     clinicData = clinicData.filter(item => item.id !== clinicId);
-    res
+    return res
         .status(200)
         .json({ message: "SucessFully Deleted the clinic", result: clinic });
 };

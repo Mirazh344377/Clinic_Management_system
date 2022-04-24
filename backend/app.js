@@ -22,7 +22,6 @@
 
 // const express = require('express');
 // const app = express();
-// //app.use(express.json());
 // const hospitals = [{
 //         DrID: "101",
 //         PasentName: "Sinky"
@@ -37,9 +36,6 @@
 //     },
 // ];
 // app.get("/hospitals", (req, res) => {
-//     // res.setHeader("Contant-Type", "application/json");
-//     //res.setHeader("My-Header", "ABC");
-//     // res.status(500).json({message:"Something went wrong"});
 //     const data = JSON.stringify({
 //         success: true,
 //         result: hospitals
@@ -51,25 +47,7 @@
 //     console.log(req.query);
 //     res.send('data');
 // });
-// // app.get("/api/hospitals",(req,res)=>{
-// //     req.setHeader("Content-type","application/json");
-// //     res.json({
-// //         success:true,
-// //         result: hospitals
-// //     })
-// // })
-// // app.get("/api/hospital", (req, res) => {
-// //         console.log(req.query);
-// //         res.status(200).json({ message: "Scussfully", data: req.query })
-// //     })
-// // app.post('/api/add-patient', (req, res)=> {
-// //     console.log(req.body);
-// //     res.status(200).json({message: 'Sucessful'});
-// //     res.status(200).json({message:"Successful",data:req.body});
-// //     });
-// // app.post("/jeneralword/hospital", (req, res) => {
-// //     res.send("Yes i am in post method");
-// // })
+
 // app.listen(3005, () => {
 //     console.log("Server is Started");
 // });
