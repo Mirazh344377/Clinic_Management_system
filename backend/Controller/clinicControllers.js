@@ -1,10 +1,9 @@
-//declaring array of data
 let clinicData = [];
 
 //get all clinic => /api/clinic
 exports.getAllClinic = (req, res) => {
     const data = {
-        message: "Sucessfull",
+        message: "Successful",
         result: clinicData,
         count: clinicData.length
     };
