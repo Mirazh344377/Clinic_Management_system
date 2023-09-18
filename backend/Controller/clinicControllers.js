@@ -1,3 +1,4 @@
+//declaring array of data
 let clinicData = [];
 
 //get all clinic => /api/clinic
